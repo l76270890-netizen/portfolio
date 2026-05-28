@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawrence Ifeanyi | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="#home">My Portfolio</a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#home" >Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+       <section class="hero" id="home">
+         <!-- IMAGE SPACE (NEW - NO DESIGN CHANGE) -->
+         <div class="hero-image" id="heroImg">
+       <img src="./download.png" alt="Profile Image">
+     </div>
+    <div class="hero-copy reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Lawrence Ifeanyi</h1>
+        <h2>Frontend Developer crafting responsive and memorable web experiences.</h2>
+        <p class="hero-text">
+            I build responsive and user-friendly web interfaces using modern technologies.
+            I'm passionate about clean design, efficient code, and experiences that feel smooth on every screen.
+        </p>
+
+        <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-scroll-target="#contact">Hire Me</button>
+            <button class="btn btn-secondary" id="Connect" type="button" data-scroll-target="#about">Let's Connect</button>
+              <div class="social-links">
+                 <!-----social-links------>
+    <a href="https://facebook.com/yourusername" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com/yourusername" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/yourusername" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/yourusername" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+  </div>
+             
+         
+      
+    </div>
+  
+
+</section>
+
+        <section id="about" class="About">
+            <div class="about-grid">
+                <div class="content-wrapper">
+                     <p class="section-label">About Me</p>
+                    <h2>Frontend Developer</h2>
+                </div>
+                <div class="img-card reveal">
+                    <img src="./download.png" alt="Portrait of Lawrence Ifeanyi">
+                </div>
+
+                <div class="content reveal">
+                    <p class="section-label" id="aboutParagraph">About Me</p>
+                    <h2 id="aboutHeader">Frontend Developer</h2>
+
+                    <p>
+                        I am a passionate Frontend Developer focused on building responsive,
+                        user-friendly, and visually appealing websites. I enjoy turning ideas
+                        into real-world digital experiences using HTML, CSS, and JavaScript.
+                    </p>
+
+                    <p>
+                        I am committed to writing clean and maintainable code while continuously
+                        learning new technologies to improve my skills. My goal is to create
+                        interfaces that not only look great but also provide a smooth and engaging
+                        user experience.
+                    </p>
+
+                    <h5>Who I Am</h5>
+                    <p>
+                        I love combining strong visuals with practical frontend solutions. Whether
+                        it's a landing page, portfolio, or product interface, I enjoy shaping ideas
+                        into polished digital experiences that feel both useful and beautiful.
+                    </p>
+
+                    <button class="btn btn-primary" type="button" data-scroll-target="#contact">Contact Me</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="service" id="service">
+            <p class="service-label">My Services</p>
+            <h2 class="reveal">What I Can Build</h2>
+
+            <div class="service-grid">
+                <article class="service-card reveal">
+                    <span class="service-number">01</span>
+                    <h3>Web Design</h3>
+                    <p>Clean, responsive website layouts with strong visual hierarchy and modern styling.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">02</span>
+                    <h3>Frontend Development</h3>
+                    <p>Interactive interfaces built with HTML, CSS, and JavaScript for smooth user experiences.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">03</span>
+                    <h3>Landing Pages</h3>
+                    <p>Conversion-focused pages designed to present products, brands, and offers clearly.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">04</span>
+                    <h3>UI Styling</h3>
+                    <p>Refreshing existing interfaces with better spacing, colors, typography, and consistency.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">05</span>
+                    <h3>Portfolio Sites</h3>
+                    <p>Personal portfolio websites that showcase your skills, personality, and projects beautifully.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">06</span>
+                    <h3>Website Updates</h3>
+                    <p>Improving existing websites with stronger visuals, better responsiveness, and cleaner structure.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills" id="Skills">
+            <p class="section-label">My Skills</p>
+            <h2 class="reveal">Tools I Use</h2>
+
+            <div class="skills-container">
+                <div class="skill reveal" data-skill-note="HTML gives me the structure for accessible and well-organized interfaces.">HTML</div>
+                <div class="skill reveal" data-skill-note="PHP helps me work with dynamic website features and server-side logic.">PHP</div>
+
+                <div class="skill reveal" data-skill-note="CSS is where I shape layouts, motion, spacing, and brand personality.">CSS</div>
+                <div class="skill reveal" data-skill-note="Ruby expands the way I think about logic, readability, and backend workflows.">Ruby</div>
+                <div class="skill reveal" data-skill-note="JavaScript brings my interfaces to life with interaction and dynamic behavior.">JS</div>
+                <div class="skill reveal" data-skill-note="Solidity reflects my interest in emerging technologies and blockchain products.">Solidity</div>
+            </div>
+
+            <p class="skill-note reveal" id="skillNote">Click or hover on a skill to see what it adds to my work.</p>
+        </section>
+
+        
+
+
+
+        <!------project-section------->
+        <section id="project" class="project-card-container">
+            <p class="project-label">Latest Project</p>
+            <h2 class="reveal">Selected Work</h2>
+
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <img src="./Screenshot (14).png" alt="Shopping website project preview">
+                    <div class="project-content">
+                        <h4>Shopping Website</h4>
+                        <p>A responsive shopping website built with HTML, CSS, and JavaScript.</p>
+                          <a href="" target="_blank">
+                        <button class="btn btn-primary project-button" type="button" data-project="Coffee Website">
+                         View Project
+                         </button>
+                            </a>
+
+                            
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <img src="./Screenshot (12).png" alt="Coffee website project preview">
+                    <div class="project-content">
+                        <h4>Coffee Website</h4>
+                        <p>A responsive coffee website built with HTML, CSS, and JavaScript.</p>
+                        <a href="https://tranquil-bubblegum-fe0ca7.netlify.app" target="_blank">
+                        <button class="btn btn-primary project-button" type="button" data-project="Coffee Website">
+                         View Project
+                         </button>
+                            </a>
+                        
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <img src="./Screenshot (15).png" alt="Music website project preview">
+                    <div class="project-content">
+                        <h4>Music Website</h4>
+                        <p>A responsive music website built with HTML, CSS, and JavaScript.</p>
+                       <a href="https://classy-bublanina-30e9f6.netlify.app" target="_blank">
+                       <button class="btn btn-primary project-button" type="button" data-project="Music Website">
+                       View Project
+                      </button>
+                         </a>
+                        
+                       
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <img src="./Screenshot (16).png" alt="Tech school website project preview">
+                    <div class="project-content">
+                        <h4>Tech-School Website</h4>
+                        <p>A responsive tech-school website built with HTML, CSS, and JavaScript.</p>
+                       <a href="https://grand-macaron-64dddd.netlify.app" target="_blank">
+                       <button class="btn btn-primary project-button" type="button" data-project="Tech-School Website">
+                        View Project
+                        </button>
+                        </a>
+                    </div>
+                </article>
+
+
+                 <article class="project-card reveal">
+                    <img src="./Screenshot 2026-05-05 001021.png" alt="Tech school website project preview">
+                    <div class="project-content">
+                        <h4>E-commerce Shopping Website</h4>
+                        <p>A responsive e-commerce shopping website built with HTML, CSS, and JavaScript.</p>
+                       <a href="https://glowing-sfogliatella-245468.netlify.app" target="_blank">
+    <button class="btn btn-primary project-button" type="button" data-project="Tech-School Website">
+        View Project
+    </button>
+</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container reveal">
+                <p class="section-label">Contact Me</p>
+                <h2>Let's Build Something Great</h2>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="input-row">
+                        <input type="text" id="firstName" placeholder="First name" name="firstName">
+                        <input type="text" id="lastName" placeholder="Second name" name="lastName">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="tel" id="phone" placeholder="Phone No." name="phone">
+                        <input type="email" id="email" placeholder="Email Address" name="email">
+                    </div>
+
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                    <button class="btn btn-primary submit-button" type="submit">Get In Touch</button>
+                    <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
