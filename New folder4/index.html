@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<label id="countlabel">0</label><br>
+   <div class="btncontainer">
+    <button id="decreaseBtn" class="button">Decrease</button>
+   <button id="resetBtn" class="button">reset</button>
+   <button id="increaseBtn" class="button">increase</button>
+
+   </div>
+</div>
+   
+
+
+
+
+
+   <form>
+<h1>Temperature</h1>
+<input type="number" id="textbox" value="0"><br>
+
+<input type="radio" id="toFahrenheit" name="unit">
+<label for="toFahrenheit" >Fahrenheit => Celsius</label><br>
+
+<input type="radio" id="toCelsius" name="unit">
+<label for="toCelsius" >Celsius => Fahrenheit</label><br>
+
+<button type="button" onclick="convert()">Submit</button>
+<p id="result"></p>
+
+</form>
+
+
+
+<div id="clock-container">
+    <div id="clock">00:00:00</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="calculator">
+    <input id="display" readonly>
+    <div id="keys">
+         <button class="operator" onclick="appendToDisplay('+')">+</button>
+         <button  onclick="appendToDisplay('7')">7</button>
+        <button  onclick="appendToDisplay('8')">8</button>
+        <button  onclick="appendToDisplay('9')">9</button>
+        <button class="operator" onclick="appendToDisplay('-')">-</button>
+        <button  onclick="appendToDisplay('4')">4</button>
+        <button  onclick="appendToDisplay('5')">5</button>
+        <button  onclick="appendToDisplay('6')">6</button>
+        <button class="operator" onclick="appendToDisplay('*')">*</button>
+        <button  onclick="appendToDisplay('1')">1</button>
+        <button  onclick="appendToDisplay('2')">2</button>
+        <button  onclick="appendToDisplay('3')">3</button>
+        <button class="operator" onclick="appendToDisplay('/')">/</button>
+        <button  onclick="appendToDisplay('0')">0</button>
+        <button  onclick="appendToDisplay('.')">.</button>
+        <button  onclick="calculate()">=</button>
+        <button class="operator" onclick="clearDisplay()">AC</button>
+         <button class="operator" onclick="deleteDisplay()">DEL</button>
+    </div>
+</div>
+
+
+
+<!----cars---->
+<div class="slider">
+    <div class="slides">
+        <img class="slides" src="./images (1).jpg" alt="">
+        <img class="slides" src="./images (2).jpg" alt="">
+        <img class="slides" src="./images (3).jpg" alt="">
+        <img class="slides" src="./images (4).jpg" alt="">
+    </div>
+    <button class="next" onclick="nextslide()">&#10094</button>
+    <button class="prev" onclick="prevslide()">&#10095</button>
+
+</div>
+
+   
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

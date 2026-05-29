@@ -1,0 +1,169 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  background: #d3d5d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* ================= BUTTON SECTION ================= */
+.btncontainer {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 30px;
+  background-color: aquamarine;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ================= FORM ================= */
+form {
+  text-align: center;
+  background-color: #2e696d;
+  max-width: 350px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#textbox {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* ================= GLOBAL BUTTON ================= */
+button {
+  padding: 10px;
+  background-color: antiquewhite;
+  color: #131313;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(240, 220, 194);
+}
+
+/* ================= CLOCK ================= */
+#clock-container {
+  padding: 40px;
+  background-color: #2e696d;
+  border-radius: 10px;
+}
+
+#clock {
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+/* ================= CALCULATOR ================= */
+#calculator {
+  background-color: #141414;
+  border-radius: 15px;
+  width: 320px;
+  padding: 20px;
+}
+
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 2rem;
+  border: none;
+  text-align: right;
+  background: #222;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+#keys button {
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.operator {
+  background-color: orange;
+}
+
+.operator:hover {
+  background-color: rgb(216, 168, 78);
+}
+
+
+.slider{
+    padding: 60px 40px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+
+.slider img{
+    width: 80%;
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+img.displaySlide{
+    display: block;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: #00000029;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
+
+}
+
+@keyframes fade {
+    form {opacity: .5}
+    to {opacity: 1}
+}
