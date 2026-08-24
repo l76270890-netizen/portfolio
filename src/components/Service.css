@@ -1,7 +1,12 @@
 .service {
-  padding: 64px 20px;
+  width: 100%; /* covers full side to side */
   background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
+    right: 10px;
+  position: relative;
   text-align: center;
+  padding: 100px 20px 80px;
 }
 
 .service-label {
@@ -45,7 +50,7 @@
 
 .service-card:hover {
   transform: translateY(-5px);
-  border-color: #1E90FF; /* blue border on hover */
+  border-color: #0b61b7; /* blue border on hover */
 }
 
 .service-number {

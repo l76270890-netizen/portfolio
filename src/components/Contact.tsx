@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-container reveal is-visible">
-        <p className="section-label">Contact Me</p>
+        <p className="section-label">—— Contact Me</p>
         <h2>Let's Build Something Great</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="input-row">

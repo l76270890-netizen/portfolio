@@ -2,6 +2,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  right: 1px;
   background: rgba(10, 15, 30, 0.8); /* glass dark blue */
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -17,10 +18,14 @@ nav {
   align-items: center;
 }
 
+.span{
+  color:#1E90FF;
+}
+
 .logo {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: none;
 }
 
@@ -31,12 +36,37 @@ nav {
 }
 
 .nav-links a {
+  position: relative; /* needed for the line */
   color: #D1D5DB;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  padding: 8px 0;
+  transition: color 0.3s;
 }
-.nav-links a:hover, .nav-links a.active {
+
+/* THE LINE - this is what was missing */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 80%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1E90FF 0%, #0f3cae 100%); /* blue gradient line */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Show line on hover and active */
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* Make text blue when active/hover */
+.nav-links a:hover, 
+.nav-links a.active {
   color: #1E90FF;
 }
 

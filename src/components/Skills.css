@@ -1,7 +1,12 @@
 .skills {
-  padding: 100px 20px;
-  background: #000; /* black section */
+   width: 100%; /* covers full side to side */
+  background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
   text-align: center;
+  padding: 100px 20px 80px;
+    right: 10px;
+  position: relative;
 }
 
 .section-label {
@@ -37,10 +42,9 @@
   transition: all 0.3s;
 }
 .skill:hover {
-  background: #1E90FF;
+  background: #0b61b7;
   color: #FFFFFF;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
 }
 
 .skill-note {

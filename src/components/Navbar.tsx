@@ -18,13 +18,13 @@ export default function Navbar() {
   return (
     <nav>
       <div className="nav-container">
-        <a className="logo" href="#home">My Portfolio</a>
+        <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
         <button className={`menu-toggle ${open? 'is-open' : ''}`} onClick={() => setOpen(!open)}>
           <span></span><span></span><span></span>
         </button>
         <div className={`nav-links ${open? 'is-open' : ''}`}>
           <ul>
-            {['home','about','service','Skills','project','contact'].map(id => (
+            {['home','about','services','Skills','projects','contact'].map(id => (
               <li key={id}><a href={`#${id}`} className={active===id? 'active' : ''}>{id.charAt(0).toUpperCase()+id.slice(1)}</a></li>
             ))}
           </ul>

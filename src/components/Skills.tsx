@@ -15,7 +15,7 @@ export default function Skills(){
 
   return (
     <section className="skills" id="Skills">
-      <p className="section-label">My Skills</p>
+      <p className="section-label">—— My Skills</p>
       <h2 className="reveal is-visible">Tools I Use</h2>
       <div className="skills-container">
         {skills.map(s => (

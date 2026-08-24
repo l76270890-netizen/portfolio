@@ -1,13 +1,13 @@
 
 .hero {
-  padding: 170px 20px;
-  background: linear-gradient(180deg, #000000); /* dark blue gradient bg */
+  background: linear-gradient(180deg, #00040c 0%, #00040c 100%); /* dark blue gradient bg */
+ width: 100%; /* covers full side to side */
+  color: #FFFFFF;
+  right: 10px;
+  position: relative;
   display: flex;
   align-items: center;
-}
-
-body{
-   background: linear-gradient(180deg, #000000); /* dark blue gradient bg */
+  padding: 135px 10px 80px;
 }
 
 .hero-container {
@@ -137,7 +137,6 @@ body{
   transform: translate(-50%, -50%);
   width: 260px;
   height: 260px;
-  background: radial-gradient(circle, rgba(30, 144, 255, 0.4) 0%, transparent 70%); /* blue glow */
   filter: blur(30px);
   border-radius: 50%;
   z-index: 1;
@@ -151,8 +150,43 @@ body{
   left: 0;
   object-fit: cover;
   z-index: 2;
-  border-radius: 50%;
 }
+
+
+/* SOCIALS - arranged properly */
+.socials {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+  margin-top: 15px;
+  
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1E90FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.socials a svg {
+  width: 20px;
+  height: 20px;
+  fill: #1E90FF;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #1E90FF;
+  transform: translateY(-3px);
+}
+.socials a:hover svg { fill: #FFF; }
+
+
 
 /* DESKTOP LAYOUT */
 @media (min-width: 900px) {
@@ -194,3 +228,11 @@ body{
     left: -20%;
   }
 }
+
+
+
+
+
+
+
+
