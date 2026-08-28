@@ -15,17 +15,40 @@ export default function Navbar() {
     sections.forEach(s => observer.observe(s))
   }, [])
 
+  // close drawer when clicking a link
+  const handleLinkClick = () => setOpen(false)
+
+  // lock body scroll when drawer open
+  useEffect(() => {
+    document.body.style.overflow = open? 'hidden' : 'auto'
+  }, [open])
+
   return (
     <nav>
       <div className="nav-container">
         <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
-        <button className={`menu-toggle ${open? 'is-open' : ''}`} onClick={() => setOpen(!open)}>
+
+        {/* HAMBURGER */}
+        <button className={`menu-toggle ${open? 'is-open' : ''}`} onClick={() => setOpen(!open)} aria-label="Toggle Menu">
           <span></span><span></span><span></span>
         </button>
+
+        {/* OVERLAY */}
+        <div className={`overlay ${open? 'show' : ''}`} onClick={() => setOpen(false)}></div>
+
+        {/* DRAWER */}
         <div className={`nav-links ${open? 'is-open' : ''}`}>
           <ul>
             {['home','about','services','Skills','projects','contact'].map(id => (
-              <li key={id}><a href={`#${id}`} className={active===id? 'active' : ''}>{id.charAt(0).toUpperCase()+id.slice(1)}</a></li>
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={active===id? 'active' : ''}
+                  onClick={handleLinkClick}
+                >
+                  {id.charAt(0).toUpperCase()+id.slice(1)}
+                </a>
+              </li>
             ))}
           </ul>
         </div>

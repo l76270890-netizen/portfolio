@@ -12,27 +12,19 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: 'CBT Exam App',
+    title: 'Job Board App',
     description: 'A full-stack exam system with timed tests, auto-grading, student dashboard, and admin panel. Built for schools and training centers.',
-    image: 'b5.jpg',
+    image: 'public/poject.png',
     tags: ['React', 'PHP', 'MySQL', 'Tailwind'],
-    github: '#',
+    github: 'https://github.com/yourusername',
     demo: '#'
   },
   {
-    title: 'Portfolio Website',
+    title: 'Hotel booking Website',
     description: 'Modern responsive portfolio built with React, Vite, and Framer Motion. Focused on performance, accessibility, and clean UI.',
-    image: 'b5.jpg',
+    image: 'public/Hotel.png',
     tags: ['React', 'Vite', 'CSS', 'Framer Motion'],
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'E-commerce Store',
-    description: 'E-commerce platform with product filters, cart, and payment integration. Designed for fast loading and mobile-first UX.',
-    image: 'b5.jpg',
-    tags: ['React', 'Node.js', 'Stripe', 'MongoDB'],
-    github: '#',
+    github: 'https://github.com/yourusername',
     demo: '#'
   }
 ]

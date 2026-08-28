@@ -1,13 +1,17 @@
 
 .hero {
   background: linear-gradient(180deg, #00040c 0%, #00040c 100%); /* dark blue gradient bg */
- width: 100%; /* covers full side to side */
+ width: 106.2%; /* covers full side to side */
   color: #FFFFFF;
   right: 10px;
   position: relative;
   display: flex;
   align-items: center;
-  padding: 135px 10px 80px;
+  padding: 135px 20px 80px;
+}
+body{
+  background: linear-gradient(180deg, #000207 0%, #0A0F1E 100%); /* dark blue gradient bg */
+
 }
 
 .hero-container {
@@ -157,7 +161,7 @@
 .socials {
   display: flex;
   gap: 16px;
-  justify-content: start;
+  justify-content: center;
   margin-top: 15px;
   
 }
@@ -227,6 +231,14 @@
     top: -25%;
     left: -20%;
   }
+
+  .socials {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+  margin-top: 15px;
+  
+}
 }
 
 

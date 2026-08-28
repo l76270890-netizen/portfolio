@@ -1,9 +1,7 @@
 .contact {
-
-
-      right: 10px;
+  right: 10px;
   position: relative;
-   width: 100%; /* covers full side to side */
+   width: 106.2%; /* covers full side to side */
     background: linear-gradient(180deg, #000207 0%, #000207 100%); /* dark blue gradient bg */
   color: #FFFFFF;
   align-items: center;
