@@ -1,0 +1,81 @@
+.service {
+  width: 106.2%; /* covers full side to side */
+  background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
+    right: 10px;
+  position: relative;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.service-label {
+  color: #1E90FF; /* bright blue accent */
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.service-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  color: #FFFFFF; /* white title */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-card {
+  background: #000; /* black card */
+  padding: 32px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(30, 144, 255, 0.2); /* subtle blue border */
+  box-shadow: 0 4px 20px rgba(30, 144, 255, 0.1);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #0b61b7; /* blue border on hover */
+}
+
+.service-number {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(30, 144, 255, 0.2) 0%, rgba(30, 144, 255, 0.05) 100%); /* blue glow */
+  border: 1px solid #1E90FF;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1E90FF; /* blue number */
+  margin: 0 auto 20px;
+}
+
+.service-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #FFFFFF; /* white */
+}
+
+.service-card-desc {
+  color: #A0A0A0; /* soft gray text */
+  line-height: 1.6;
+}

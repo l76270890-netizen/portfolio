@@ -1,0 +1,64 @@
+.skills {
+   width: 106.2%; /* covers full side to side */
+  background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 80px;
+    right: 10px;
+  position: relative;
+}
+
+.section-label {
+  color: #1E90FF;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.skills h2 {
+  font-size: 36px;
+  color: #FFFFFF;
+  margin: 8px 0 40px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.skill {
+  background: rgba(30, 144, 255, 0.1);
+  border: 1px solid rgba(30, 144, 255, 0.3);
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.skill:hover {
+  background: #0b61b7;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+.skill-note {
+  color: #A0A0A0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  min-height: 50px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skills h2 { font-size: 42px; }
+}
