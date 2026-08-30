@@ -15,10 +15,8 @@ export default function Navbar() {
     sections.forEach(s => observer.observe(s))
   }, [])
 
-  // close drawer when clicking a link
   const handleLinkClick = () => setOpen(false)
 
-  // lock body scroll when drawer open
   useEffect(() => {
     document.body.style.overflow = open? 'hidden' : 'auto'
   }, [open])
@@ -28,16 +26,20 @@ export default function Navbar() {
       <div className="nav-container">
         <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
 
-        {/* HAMBURGER */}
+        {/* HAMBURGER still controls open/close */}
         <button className={`menu-toggle ${open? 'is-open' : ''}`} onClick={() => setOpen(!open)} aria-label="Toggle Menu">
-          <span></span><span></span><span></span>
+         <span></span><span></span><span></span>
         </button>
 
-        {/* OVERLAY */}
         <div className={`overlay ${open? 'show' : ''}`} onClick={() => setOpen(false)}></div>
 
-        {/* DRAWER */}
+        {/* DRAWER - NO X BUTTON */}
         <div className={`nav-links ${open? 'is-open' : ''}`}>
+          <div className="drawer-header">
+            <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
+            {/* X button removed */}
+          </div>
+
           <ul>
             {['home','about','services','Skills','projects','contact'].map(id => (
               <li key={id}>
@@ -51,6 +53,10 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
+          <div className="drawer-footer">
+            <p>Available for work</p>
+          </div>
         </div>
       </div>
     </nav>

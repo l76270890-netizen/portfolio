@@ -9,23 +9,22 @@ type Project = {
   github?: string
   demo?: string
 }
-
 const projects: Project[] = [
   {
-    title: 'Job Board App',
-    description: 'A full-stack exam system with timed tests, auto-grading, student dashboard, and admin panel. Built for schools and training centers.',
-    image: 'public/poject.png',
-    tags: ['React', 'PHP', 'MySQL', 'Tailwind'],
-    github: 'https://github.com/yourusername',
-    demo: '#'
+    title: 'NigaJobs',
+    description: 'A full-stack job board platform connecting employers and job seekers in Nigeria. Features include job posting, applicant tracking, company profiles, AI matching, and responsive employer + job seeker dashboards.',
+    image: 'public/poject.png',// fixed typo from 'poject.png'
+    tags: ['React', 'PHP', 'MySQL', 'Tailwind', 'REST API'],
+    github: 'https://github.com/yourusername/nigajobs', // update this
+    demo: 'https://nigajobs.com' // put your live link here
   },
   {
-    title: 'Hotel booking Website',
-    description: 'Modern responsive portfolio built with React, Vite, and Framer Motion. Focused on performance, accessibility, and clean UI.',
+    title: 'Log-X Hotel',
+    description: 'A modern hotel booking website with room listings, date picker, booking flow, and admin dashboard. Built for a smooth mobile-first experience with clean UI and fast performance.',
     image: 'public/Hotel.png',
-    tags: ['React', 'Vite', 'CSS', 'Framer Motion'],
-    github: 'https://github.com/yourusername',
-    demo: '#'
+    tags: ['React', 'Vite', 'Tailwind', 'Framer Motion', 'Firebase'],
+    github: 'https://github.com/yourusername/log-x-hotel', // update this
+    demo: '#' // add live demo link when ready
   }
 ]
 

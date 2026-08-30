@@ -9,10 +9,58 @@
   align-items: center;
   padding: 135px 20px 80px;
 }
+
+
 body{
   background: linear-gradient(180deg, #000207 0%, #0A0F1E 100%); /* dark blue gradient bg */
 
 }
+
+
+
+.about-image-box1{
+   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-bg-shape1{
+   position: absolute;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(135deg, #1E90FF 0%, #0f3cae 100%);
+  border-radius: 24px;
+  transform: rotate(-6deg);
+  z-index: 0;
+}
+
+.about-glow1{
+    position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #1E90FF;
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.about-img1{
+   width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  border: 2px solid rgba(30, 144, 255, 0.3);
+}
+
+
+
+
+
+
+
+
 
 .hero-container {
   max-width: 1100px;
@@ -199,6 +247,22 @@ body{
     justify-content: space-between;
     align-items: center;
   }
+
+
+.hero {
+  background: linear-gradient(180deg, #00040c 0%, #00040c 100%); /* dark blue gradient bg */
+ width: 106.2%; /* covers full side to side */
+  color: #FFFFFF;
+  right: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 135px 20px 80px;
+}
+
+
+
+
   .hero-text {
     text-align: left;
     flex: 1;
@@ -215,22 +279,43 @@ body{
   .hero-name {
     font-size: 52px;
   }
-  .hero-image-wrap {
-    width: 320px;
-    height: 320px;
-    order: 0;
-  }
-  .hero-glow {
-    width: 340px;
-    height: 340px;
-    top: 35%;
-  }
-  .hero-image {
-    width: 150%;
-    height: 140%;
-    top: -25%;
-    left: -20%;
-  }
+ 
+.about-image-box1{
+   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-bg-shape1{
+   position: absolute;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(135deg, #1E90FF 0%, #0f3cae 100%);
+  border-radius: 24px;
+  transform: rotate(-6deg);
+  z-index: 0;
+}
+
+.about-glow1{
+    position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #1E90FF;
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.about-img1{
+   width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  border: 2px solid rgba(30, 144, 255, 0.3);
+}
+
 
   .socials {
   display: flex;

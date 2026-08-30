@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import './Skills.css'
 
+
 const skills = [
-  { name: 'HTML', note: 'HTML gives me the structure for accessible and well-organized interfaces.' },
-  { name: 'PHP', note: 'PHP helps me work with dynamic website features and server-side logic.' },
-  { name: 'CSS', note: 'CSS is where I shape layouts, motion, spacing, and brand personality.' },
-  { name: 'Ruby', note: 'Ruby expands the way I think about logic, readability, and backend workflows.' },
-  { name: 'JS', note: 'JavaScript brings my interfaces to life with interaction and dynamic behavior.' },
-  { name: 'Solidity', note: 'Solidity reflects my interest in emerging technologies and blockchain products.' },
+  { name: 'React', note: 'I build dynamic, component-based UIs with React. Used for NigaJobs dashboards and Log-X booking flows.' },
+  { name: 'JavaScript', note: 'JavaScript brings my interfaces to life with interaction, state management, and API calls.' },
+  { name: 'Tailwind CSS', note: 'Tailwind helps me ship clean, responsive designs fast. All my recent projects use utility-first styling.' },
+  { name: 'HTML5', note: 'Semantic HTML for accessible, SEO-friendly structure. Foundation of NigaJobs and Log-X.' },
+  { name: 'CSS3', note: 'Custom CSS for animations, layouts, and polishing brand personality beyond Tailwind.' },
+  { name: 'PHP', note: 'Server-side logic and REST APIs. Powers the backend for NigaJobs job posting and applications.' },
+  { name: 'MySQL', note: 'Database design for users, jobs, bookings, and applications. Optimized queries for performance.' },
+  { name: 'Vite', note: 'Fast build tool for React projects. Keeps Log-X and my portfolio running smooth.' },
 ]
 
 export default function Skills(){
