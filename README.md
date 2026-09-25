@@ -12,3 +12,7 @@ The admin editor manages navigation, hero, about, services, skills, projects, co
 ## Production
 
 Run `npm run build`, then set `ADMIN_PASSWORD` and run `npm start`. The Node server serves the built `dist/` site and the API from the same origin. Use a host with persistent disk storage so edits, contact messages, and uploaded images survive restarts. Keep `.env` private and use HTTPS on a public deployment.
+
+## Deploy on Vercel
+
+The `/admin` route is rewritten to the Vite app, and the `api/` folder contains Vercel Function endpoints. In the Vercel project, create and connect a **private Vercel Blob store** so Vercel provides `BLOB_READ_WRITE_TOKEN`, then add `ADMIN_PASSWORD` under **Settings → Environment Variables** and redeploy. The admin page is at `/admin`. Content, messages, and uploaded images are stored in the private Blob store; images are streamed through `/api/assets`.

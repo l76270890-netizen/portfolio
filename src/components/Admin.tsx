@@ -117,7 +117,7 @@ export default function Admin() {
   async function upload(path: (string | number)[], file: File) {
     setBusy(true); setNotice(`Uploading ${file.name}…`)
     try {
-      if (!/^image\/(png|jpeg|webp|gif)$/.test(file.type) || file.size > 5 * 1024 * 1024) throw new Error('Choose a PNG, JPG, WEBP, or GIF image under 5 MB.')
+      if (!/^image\/(png|jpeg|webp|gif)$/.test(file.type) || file.size > 3 * 1024 * 1024) throw new Error('Choose a PNG, JPG, WEBP, or GIF image under 3 MB.')
       const encoded = await new Promise<string>((resolve, reject) => {
         const reader = new FileReader(); reader.onload = () => resolve(String(reader.result).split(',')[1] || ''); reader.onerror = () => reject(new Error('Could not read this image.')); reader.readAsDataURL(file)
       })
