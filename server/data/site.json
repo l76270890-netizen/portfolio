@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "brandFirst": "Lawrence",
+    "brandLast": "Ifeanyi",
+    "availability": "Available for work",
+    "links": [
+      {
+        "label": "Home",
+        "target": "home"
+      },
+      {
+        "label": "About",
+        "target": "about"
+      },
+      {
+        "label": "Services",
+        "target": "services"
+      },
+      {
+        "label": "Skills",
+        "target": "Skills"
+      },
+      {
+        "label": "Projects",
+        "target": "projects"
+      },
+      {
+        "label": "Contact",
+        "target": "contact"
+      }
+    ]
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Lawrence Ifeanyi",
+    "rolePrefix": "And I'm a",
+    "role": "Frontend Developer",
+    "description": "Hi! I'm Lawrence, a passionate Frontend Developer specializing in building responsive websites and interactive web experiences using HTML, CSS, React, and PHP.",
+    "photo": "/hero.jpeg",
+    "primaryButton": "Hire Me",
+    "secondaryButton": "Contact Me",
+    "socials": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/l76270890-netizen"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/yourprofile"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/@LaURD0001"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/lawre_nce351"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://facebook.com/yourprofile"
+      }
+    ]
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "title": "Frontend Developer building products that people actually use",
+    "paragraphs": [
+      "I'm Lawrence, a Frontend Developer based in Abuja. I specialize in turning complex problems into simple, beautiful, and intuitive interfaces.",
+      "Currently building NigaJobs — a full-stack job platform for Nigeria, and Log-X Hotel — a modern booking website. I care about performance, accessibility, and clean code that scales."
+    ],
+    "photo": "/hero.jpeg",
+    "skills": [
+      "React",
+      "Tailwind",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "stats": [
+      {
+        "value": "2+",
+        "label": "Years Building"
+      },
+      {
+        "value": "15+",
+        "label": "Projects Shipped"
+      },
+      {
+        "value": "2",
+        "label": "Live Products"
+      }
+    ],
+    "primaryButton": "Hire Me",
+    "secondaryButton": "View Work"
+  },
+  "services": {
+    "label": "—— MY SERVICES",
+    "title": "What I Can Build",
+    "items": [
+      {
+        "id": "01",
+        "title": "Web Design",
+        "description": "Clean, responsive website layouts with strong visual hierarchy and modern styling."
+      },
+      {
+        "id": "02",
+        "title": "Frontend Development",
+        "description": "Interactive interfaces built with HTML, CSS, JavaScript and React for smooth user experiences."
+      },
+      {
+        "id": "03",
+        "title": "React Applications",
+        "description": "Modern single page applications with React, reusable components, and clean code."
+      },
+      {
+        "id": "04",
+        "title": "Landing Pages",
+        "description": "Conversion-focused pages designed to present products, brands, and offers clearly."
+      },
+      {
+        "id": "05",
+        "title": "UI Styling",
+        "description": "Refreshing existing interfaces with better spacing, colors, typography, and consistency."
+      },
+      {
+        "id": "06",
+        "title": "Portfolio Sites",
+        "description": "Personal portfolio websites that showcase your skills, personality, and projects beautifully."
+      },
+      {
+        "id": "07",
+        "title": "Website Updates",
+        "description": "Improving existing websites with stronger visuals, better responsiveness, and cleaner structure."
+      },
+      {
+        "id": "08",
+        "title": "Job Board Apps",
+        "description": "Modern multipage applications, firebase functionalities with React, reusable components, and clean code."
+      }
+    ]
+  },
+  "skills": {
+    "label": "—— My Skills",
+    "title": "Tools I Use",
+    "instruction": "Click or hover on a skill to see what it adds to my work.",
+    "items": [
+      {
+        "name": "React",
+        "note": "I build dynamic, component-based UIs with React. Used for NigaJobs dashboards and Log-X booking flows."
+      },
+      {
+        "name": "JavaScript",
+        "note": "JavaScript brings my interfaces to life with interaction, state management, and API calls."
+      },
+      {
+        "name": "Tailwind CSS",
+        "note": "Tailwind helps me ship clean, responsive designs fast. All my recent projects use utility-first styling."
+      },
+      {
+        "name": "HTML5",
+        "note": "Semantic HTML for accessible, SEO-friendly structure. Foundation of NigaJobs and Log-X."
+      },
+      {
+        "name": "CSS3",
+        "note": "Custom CSS for animations, layouts, and polishing brand personality beyond Tailwind."
+      },
+      {
+        "name": "PHP",
+        "note": "Server-side logic and REST APIs. Powers the backend for NigaJobs job posting and applications."
+      },
+      {
+        "name": "MySQL",
+        "note": "Database design for users, jobs, bookings, and applications. Optimized queries for performance."
+      },
+      {
+        "name": "Vite",
+        "note": "Fast build tool for React projects. Keeps Log-X and my portfolio running smooth."
+      }
+    ]
+  },
+  "projects": {
+    "label": "—— MY WORK",
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects I’ve built. Each one solves a real problem with clean code and great UX.",
+    "items": [
+      {
+        "title": "NigaJobs",
+        "description": "A full-stack job board platform connecting employers and job seekers in Nigeria. Features include job posting, applicant tracking, company profiles, AI matching, and responsive employer + job seeker dashboards.",
+        "image": "/poject.png",
+        "tags": [
+          "React",
+          "PHP",
+          "MySQL",
+          "Tailwind",
+          "REST API"
+        ],
+        "github": "https://github.com/l76270890-netizen/portfolio",
+        "demo": "https://job-board-app-sepia.vercel.app/"
+      },
+      {
+        "title": "Log-X Hotel",
+        "description": "A modern hotel booking website with room listings, date picker, booking flow, and admin dashboard. Built for a smooth mobile-first experience with clean UI and fast performance.",
+        "image": "/Hotel.png",
+        "tags": [
+          "React",
+          "Vite",
+          "Tailwind",
+          "Framer Motion",
+          "Firebase"
+        ],
+        "github": "https://github.com/l76270890-netizen/portfolio",
+        "demo": "https://hotel-booking-app-pi-nine.vercel.app"
+      }
+    ]
+  },
+  "contact": {
+    "label": "—— Contact Me",
+    "title": "Let's Build Something Great",
+    "submitLabel": "Get In Touch",
+    "email": "",
+    "phone": ""
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+main,
+section[id] {
+  width: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}

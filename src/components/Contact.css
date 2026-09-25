@@ -1,7 +1,7 @@
 .contact {
   right: 10px;
   position: relative;
-   width: 106.2%; /* covers full side to side */
+   width: 100%; /* covers full side to side */
     background: linear-gradient(180deg, #000207 0%, #000207 100%); /* dark blue gradient bg */
   color: #FFFFFF;
   align-items: center;
@@ -87,5 +87,31 @@
   .input-row input {
     width: 50%;
   }
+
+  .contact {
+  right: 10px;
+  position: relative;
+   width: 98%; /* covers full side to side */
+    background: linear-gradient(180deg, #000207 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
   .contact h2 { font-size: 42px; }
+}
+
+.contact {
+  width: 100%;
+  right: auto;
+  box-sizing: border-box;
+}
+
+.contact-container { width: min(100%, 700px); }
+
+@media (max-width: 600px) {
+  .contact { padding: 76px 20px 64px; }
+  .contact h2 { font-size: 30px; margin-bottom: 30px; }
+  .contact-form { gap: 14px; }
+  .input-row { gap: 14px; }
 }

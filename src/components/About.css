@@ -1,8 +1,8 @@
 .about {
- width: 106.2%; /* covers full side to side */
   background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
   color: #FFFFFF;
   display: flex;
+  width: 98%;
   align-items: center;
     right: 10px;
   position: relative;
@@ -154,9 +154,62 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .about {
+ width: 100%; /* covers full side to side */
+  background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+    right: 10px;
+  position: relative;
+  padding: 100px 20px 80px;
+   opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
  .about-title { font-size: 2rem; }
  .about-stats { grid-template-columns: repeat(3, 1fr);
   position: relative;
   left: 15px;
  }
+}
+
+/* Align the about section and its actions without changing its look. */
+.about {
+  width: 100%;
+  right: auto;
+  box-sizing: border-box;
+}
+
+.about-container {
+  width: min(100%, 1100px);
+  box-sizing: border-box;
+}
+
+.about-cta,
+.about-btn.primary,
+.about-btn.secondary,
+.about-stats {
+  position: static;
+  left: auto;
+}
+
+.about-img {
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .about { padding-inline: clamp(20px, 5vw, 40px); }
+  .about-stats { left: auto; }
+}
+
+@media (max-width: 520px) {
+  .about-cta { flex-wrap: wrap; }
+  .about-btn { padding: 12px 20px; }
+  .about-stats { gap: 12px; }
+  .stat-item h4 { font-size: 1.65rem; }
+  .stat-item p { font-size: 12px; }
 }

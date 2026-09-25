@@ -1,5 +1,5 @@
 .skills {
-   width: 106.2%; /* covers full side to side */
+   width: 100%; /* covers full side to side */
   background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
   color: #FFFFFF;
   align-items: center;
@@ -60,5 +60,41 @@
   .skills-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .skills {
+   width: 98%; /* covers full side to side */
+  background: linear-gradient(180deg, #0A0F1E 0%, #000207 100%); /* dark blue gradient bg */
+  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 80px;
+    right: 10px;
+  position: relative;
+}
   .skills h2 { font-size: 42px; }
+}
+
+.skills {
+  width: 100%;
+  right: auto;
+  box-sizing: border-box;
+}
+
+.skills-container {
+  width: min(100%, 900px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .skills-container { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1100px) {
+  .skills-container { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .skills { padding: 76px 20px 64px; }
+  .skills h2 { font-size: 30px; }
+  .skill { padding: 16px 10px; }
 }

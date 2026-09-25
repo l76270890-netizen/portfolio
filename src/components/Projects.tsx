@@ -1,45 +1,18 @@
 
 import './Projects.css'
-
-type Project = {
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  github?: string
-  demo?: string
-}
-const projects: Project[] = [
-  {
-    title: 'NigaJobs',
-    description: 'A full-stack job board platform connecting employers and job seekers in Nigeria. Features include job posting, applicant tracking, company profiles, AI matching, and responsive employer + job seeker dashboards.',
-    image: 'public/poject.png',// fixed typo from 'poject.png'
-    tags: ['React', 'PHP', 'MySQL', 'Tailwind', 'REST API'],
-    github: 'https://github.com/yourusername/nigajobs', // update this
-    demo: 'https://nigajobs.com' // put your live link here
-  },
-  {
-    title: 'Log-X Hotel',
-    description: 'A modern hotel booking website with room listings, date picker, booking flow, and admin dashboard. Built for a smooth mobile-first experience with clean UI and fast performance.',
-    image: 'public/Hotel.png',
-    tags: ['React', 'Vite', 'Tailwind', 'Framer Motion', 'Firebase'],
-    github: 'https://github.com/yourusername/log-x-hotel', // update this
-    demo: '#' // add live demo link when ready
-  }
-]
+import { useSiteContent } from '../SiteContent'
 
 export default function Projects() {
+  const { projects } = useSiteContent()
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <p className="projects-label">—— MY WORK</p>
-        <h2 className="projects-title">Featured Projects</h2>
-        <p className="projects-subtitle">
-          A selection of projects I’ve built. Each one solves a real problem with clean code and great UX.
-        </p>
+        <p className="projects-label">{projects.label}</p>
+        <h2 className="projects-title">{projects.title}</h2>
+        <p className="projects-subtitle">{projects.subtitle}</p>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
+          {projects.items.map((project, index) => (
             <div key={index} className="project-card reveal">
               <div className="project-image-wrap">
                 <img src={project.image} alt={project.title} />

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
+import { useSiteContent } from '../SiteContent'
 
 export default function Navbar() {
+  const { navigation } = useSiteContent()
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('home')
 
@@ -24,7 +26,7 @@ export default function Navbar() {
   return (
     <nav>
       <div className="nav-container">
-        <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
+        <a className="logo" href="#home"><span className='span'>{navigation.brandFirst}</span> {navigation.brandLast}</a>
 
         {/* HAMBURGER still controls open/close */}
         <button className={`menu-toggle ${open? 'is-open' : ''}`} onClick={() => setOpen(!open)} aria-label="Toggle Menu">
@@ -36,26 +38,26 @@ export default function Navbar() {
         {/* DRAWER - NO X BUTTON */}
         <div className={`nav-links ${open? 'is-open' : ''}`}>
           <div className="drawer-header">
-            <a className="logo" href="#home"><span className='span'>Lawrence</span> Ifeanyi</a>
+            <a className="logo" href="#home"><span className='span'>{navigation.brandFirst}</span> {navigation.brandLast}</a>
             {/* X button removed */}
           </div>
 
           <ul>
-            {['home','about','services','Skills','projects','contact'].map(id => (
-              <li key={id}>
+            {navigation.links.map(({ label, target }) => (
+              <li key={target}>
                 <a
-                  href={`#${id}`}
-                  className={active===id? 'active' : ''}
+                  href={`#${target}`}
+                  className={active===target? 'active' : ''}
                   onClick={handleLinkClick}
                 >
-                  {id.charAt(0).toUpperCase()+id.slice(1)}
+                  {label}
                 </a>
               </li>
             ))}
           </ul>
 
           <div className="drawer-footer">
-            <p>Available for work</p>
+            <p>{navigation.availability}</p>
           </div>
         </div>
       </div>

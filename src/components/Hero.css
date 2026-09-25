@@ -1,9 +1,9 @@
 
 .hero {
   background: linear-gradient(180deg, #00040c 0%, #00040c 100%); /* dark blue gradient bg */
- width: 106.2%; /* covers full side to side */
   color: #FFFFFF;
-  right: 10px;
+  right: 1px;
+  width: 98%;
   position: relative;
   display: flex;
   align-items: center;
@@ -246,12 +246,12 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 200px;
   }
 
 
 .hero {
   background: linear-gradient(180deg, #00040c 0%, #00040c 100%); /* dark blue gradient bg */
- width: 106.2%; /* covers full side to side */
   color: #FFFFFF;
   right: 10px;
   position: relative;
@@ -324,6 +324,49 @@ body{
   margin-top: 15px;
   
 }
+}
+
+/* Keep the existing hero design while aligning it with the page grid. */
+.hero {
+  width: 100%;
+  right: auto;
+  box-sizing: border-box;
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+.hero-container {
+  width: min(100%, 1100px);
+  gap: clamp(36px, 7vw, 96px);
+}
+
+.hero-text {
+  right: auto;
+  bottom: auto;
+  min-width: 0;
+}
+
+.about-image-box1 {
+  width: 100%;
+  min-width: 0;
+}
+
+.about-img1 {
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .hero-container {
+    justify-content: center;
+    gap: clamp(48px, 8vw, 112px);
+  }
+}
+
+@media (max-width: 899px) {
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 68px;
+  }
 }
 
 
