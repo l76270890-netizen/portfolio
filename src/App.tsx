@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import './index.css'
 import { SiteContentProvider } from './SiteContent'
 import Admin from './components/Admin'
+import './desktop.css'
 
 export default function App() {
   if (window.location.pathname === '/admin' || window.location.pathname.startsWith('/admin/')) return <Admin />
