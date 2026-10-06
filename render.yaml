@@ -11,3 +11,5 @@ services:
         generateValue: true
       - key: CORS_ORIGINS
         value: http://localhost:5173,http://127.0.0.1:5173,http://portfolio-lyart-two-4g8apjrnwv.vercel.app
+      - key: UPLOAD_DIR
+        value: /tmp/portfolio-uploads

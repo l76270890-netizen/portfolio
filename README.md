@@ -16,19 +16,18 @@ Run `npm run build`, then deploy the Vite frontend and FastAPI backend to hosts 
 
 ## Deploy on Vercel
 
-The `/admin` route is rewritten to the Vite app, and the `api/` folder contains the existing Vercel Function endpoints. Those Vercel endpoints remain separate from the FastAPI/SQLite backend. To use FastAPI in production, deploy it as a separate service with persistent storage and set `VITE_API_URL` on the frontend; serverless Vercel Functions do not provide persistent local SQLite storage.
+The `/admin` route is rewritten to the Vite app, and the `api/` folder contains the existing Vercel Function endpoints. Those Vercel endpoints remain separate from the FastAPI/SQLite backend. To use FastAPI in production, deploy it as a separate service and set `VITE_API_URL` on the frontend. Use persistent storage if database and uploaded files must survive restarts; serverless Vercel Functions do not provide persistent local SQLite storage.
 
 ### Vercel frontend + Render FastAPI backend
 
 1. Push this project to GitHub and import it into Vercel as a Vite project. Use `npm run build` as the build command and `dist` as the output directory.
-2. Create a Render **Web Service** from the same repository. Set the root directory to the repository root, build command to `python -m pip install -r backend/requirements.txt`, and start command to `python -m uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT`.
-3. Add a Render **persistent disk** mounted at `/var/data`. Add these Render environment variables:
+2. Create or update a Render **Web Service** from the same repository. If configuring it manually, set the root directory to `backend`, build command to `pip install -r requirements.txt`, and start command to `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+3. For the Render free plan, use temporary storage: set `UPLOAD_DIR` to `/tmp/portfolio-uploads` and do not set `DATABASE_URL` to a path under `/var/data`. Uploaded images and SQLite data can be lost when the service restarts or is redeployed.
+4. Add these Render environment variables:
    - `ADMIN_PASSWORD`: a new, long random password. Do not use the sample value from `.env.example`.
-   - `DATABASE_URL`: `sqlite:////var/data/portfolio.db`
-   - `UPLOAD_DIR`: `/var/data/uploads`
    - `CORS_ORIGINS`: your exact Vercel production origin, for example `https://your-site.vercel.app` (no trailing slash). Add any custom domain origins as comma-separated values.
-4. Wait for Render to deploy, then open `https://your-render-service.onrender.com/health`. It should return `{"status":"ok"}`.
-5. In Vercel project settings, add `VITE_API_URL` with the Render service URL, for example `https://your-render-service.onrender.com`, with no trailing slash. Add it for Production (and Preview if you use previews), then redeploy the frontend.
-6. Visit the Vercel site's `/admin`, sign in with the Render `ADMIN_PASSWORD`, save a content edit, submit a test contact message, and verify an image upload. The SQLite file and uploads live on the persistent disk, so they remain available across service restarts.
+5. Wait for Render to deploy, then open `https://your-render-service.onrender.com/health`. It should return `{"status":"ok"}`.
+6. In Vercel project settings, add `VITE_API_URL` with the Render service URL, for example `https://your-render-service.onrender.com`, with no trailing slash. Add it for Production (and Preview if you use previews), then redeploy the frontend.
+7. Visit the Vercel site's `/admin`, sign in with the Render `ADMIN_PASSWORD`, save a content edit, submit a test contact message, and verify an image upload. Remember that uploads and database files on the free plan are temporary.
 
 Keep `VITE_API_URL` set in Vercel before building: it is compiled into the frontend bundle. Never put `ADMIN_PASSWORD` in a `VITE_` variable or in Vercel's frontend environment variables. If you previously used a real password in `.env.example`, rotate it before deploying.
