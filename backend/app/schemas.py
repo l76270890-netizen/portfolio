@@ -24,7 +24,3 @@ class ContactMessageIn(BaseModel):
 class AdminLoginIn(BaseModel):
     password: Annotated[str, StringConstraints(min_length=1, max_length=256)]
 
-
-class ImageUploadIn(BaseModel):
-    filename: Annotated[str, StringConstraints(min_length=1, max_length=200)]
-    data: Annotated[str, Field(max_length=4_194_304)]
