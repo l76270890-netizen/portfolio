@@ -22,12 +22,14 @@ from .database import BACKEND_DIR, Base, SessionLocal, engine, get_db
 from .schemas import AdminLoginIn, ContactMessageIn, ImageUploadIn, SiteContentPayload
 
 PROJECT_DIR = BACKEND_DIR.parent
+UPLOAD_DIR = Path(os.getenv("UPLOAD_DIR", str(PROJECT_DIR / "public" / "uploads"))).resolve()
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     if not os.getenv("ADMIN_PASSWORD"):
         raise RuntimeError("ADMIN_PASSWORD is required. Set it in the project .env file before starting the API.")
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
@@ -51,7 +53,7 @@ app.add_middleware(
 )
 app.mount(
     "/uploads",
-    StaticFiles(directory=PROJECT_DIR / "public" / "uploads", check_dir=False),
+    StaticFiles(directory=UPLOAD_DIR, check_dir=False),
     name="uploads",
 )
 
@@ -148,10 +150,9 @@ def upload_image(payload: ImageUploadIn):
         raise HTTPException(status_code=400, detail="Choose a valid PNG, JPG, WEBP, or GIF image.")
 
     safe_name = re.sub(r"[^A-Za-z0-9_-]+", "-", Path(payload.filename).stem).strip("-") or "image"
-    uploads_dir = PROJECT_DIR / "public" / "uploads"
-    uploads_dir.mkdir(parents=True, exist_ok=True)
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     saved_name = f"{token_hex(12)}-{safe_name}{extension}"
-    (uploads_dir / saved_name).write_bytes(image_data)
+    (UPLOAD_DIR / saved_name).write_bytes(image_data)
     return {"url": f"/uploads/{saved_name}"}
 
 
