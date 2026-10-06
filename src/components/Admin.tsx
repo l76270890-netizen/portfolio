@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { PortfolioContent } from '../content'
 import './Admin.css'
 
-type Message = { id: string; name: string; email: string; phone: string; message: string; createdAt: string }
+type Message = { id: string | number; name: string; email: string; phone: string; message: string; createdAt: string }
 type Value = string | number | boolean | null | Value[] | { [key: string]: Value }
 
 function emptyArrayItem(path: (string | number)[]): Value {
@@ -86,7 +86,13 @@ export default function Admin() {
 
   async function loadMessages(authToken = token) {
     const response = await fetch('/api/admin/messages', { headers: { Authorization: `Bearer ${authToken}` } })
-    if (response.ok) setMessages(await response.json())
+    if (response.status === 401) { setToken(''); sessionStorage.removeItem('portfolio-admin-token'); return }
+    if (!response.ok) {
+      const result = await response.json().catch(() => ({}))
+      setNotice(result.error || 'Could not load contact messages.')
+      return
+    }
+    setMessages(await response.json())
   }
 
   useEffect(() => { if (token) { loadContent().catch((error) => setNotice(error.message)); loadMessages() } }, [token])

@@ -4,6 +4,7 @@
   color: #FFFFFF;
   right: 1px;
   width: 98%;
+  height: 105vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -158,20 +159,29 @@ body{
   gap: 12px;
 }
 .socials a {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #1E90FF; /* blue outline */
+  width: 42px;
+  height: 42px;
+  border: 1px solid #1E90FF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #1E90FF; /* blue icon */
-  transition: all 0.3s;
+  color: #1E90FF;
+  background: rgba(30, 144, 255, 0.08);
+  transition: all 0.3s ease;
 }
 .socials a:hover {
   background: #1E90FF;
   color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(30, 144, 255, 0.25);
+}
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
 }
 
 /* IMAGE WITH GLOW - MOBILE */
