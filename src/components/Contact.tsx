@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
+import { apiUrl } from '../api'
 import { useSiteContent } from '../SiteContent'
 
 export default function Contact() {
@@ -11,7 +12,7 @@ export default function Contact() {
     const form = e.currentTarget
     const formData = new FormData(form)
     try {
-      const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(formData.entries())) })
+      const response = await fetch(apiUrl('/api/contact'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(formData.entries())) })
       const result = await response.json()
       if (!response.ok) throw new Error(result.error || 'Message could not be sent.')
       setFeedback('Message sent! I will get back to you soon.')

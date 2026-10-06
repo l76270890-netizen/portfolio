@@ -7,6 +7,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:frontend": "vite",
     "start": "node server/index.mjs",
+    "start:api": "python -m uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port 8001",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

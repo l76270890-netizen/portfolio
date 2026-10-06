@@ -1,5 +1,6 @@
 
 import { useEffect, useRef, useState } from 'react'
+import { contentAssetUrl } from '../api'
 import './About.css'
 import { useSiteContent } from '../SiteContent'
 
@@ -26,7 +27,7 @@ export default function About() {
         <div className="about-image-box">
           <div className="about-bg-shape"></div>
           <div className="about-glow"></div>
-          <img src={about.photo} alt={about.title} className="about-img" />
+          <img src={contentAssetUrl(about.photo)} alt={about.title} className="about-img" />
         </div>
 
         <div className="about-content">

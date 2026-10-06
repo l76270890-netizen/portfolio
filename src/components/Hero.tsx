@@ -1,4 +1,5 @@
 import './Hero.css'
+import { contentAssetUrl } from '../api'
 import { useSiteContent } from '../SiteContent'
 
 function SocialIcon({ label }: { label: string }) {
@@ -59,7 +60,7 @@ export default function Hero() {
         <div className="about-image-box1">
           <div className="about-bg-shape1" />
           <div className="about-glow1" />
-          <img src={hero.photo} alt={hero.name} className="about-img1" />
+          <img src={contentAssetUrl(hero.photo)} alt={hero.name} className="about-img1" />
         </div>
         <div className="hero-text">
           <p className="hero-greeting">{hero.greeting}</p>

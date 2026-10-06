@@ -1,5 +1,6 @@
 
 import './Projects.css'
+import { contentAssetUrl } from '../api'
 import { useSiteContent } from '../SiteContent'
 
 export default function Projects() {
@@ -15,7 +16,7 @@ export default function Projects() {
           {projects.items.map((project, index) => (
             <div key={index} className="project-card reveal">
               <div className="project-image-wrap">
-                <img src={project.image} alt={project.title} />
+                <img src={contentAssetUrl(project.image)} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
                     {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Live Demo</a>}

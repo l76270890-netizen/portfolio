@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { apiUrl } from '../api'
 import type { PortfolioContent } from '../content'
 import './Admin.css'
 
@@ -78,14 +79,14 @@ export default function Admin() {
   const [busy, setBusy] = useState(false)
 
   async function loadContent(authToken = token) {
-    const response = await fetch('/api/admin/content', { headers: { Authorization: `Bearer ${authToken}` } })
+    const response = await fetch(apiUrl('/api/admin/content'), { headers: { Authorization: `Bearer ${authToken}` } })
     if (response.status === 401) { setToken(''); sessionStorage.removeItem('portfolio-admin-token'); return }
     if (!response.ok) throw new Error('Could not load portfolio content.')
     setContent(await response.json())
   }
 
   async function loadMessages(authToken = token) {
-    const response = await fetch('/api/admin/messages', { headers: { Authorization: `Bearer ${authToken}` } })
+    const response = await fetch(apiUrl('/api/admin/messages'), { headers: { Authorization: `Bearer ${authToken}` } })
     if (response.status === 401) { setToken(''); sessionStorage.removeItem('portfolio-admin-token'); return }
     if (!response.ok) {
       const result = await response.json().catch(() => ({}))
@@ -100,7 +101,7 @@ export default function Admin() {
   async function login(event: React.FormEvent) {
     event.preventDefault(); setBusy(true); setNotice('')
     try {
-      const response = await fetch('/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }) })
+      const response = await fetch(apiUrl('/api/admin/login'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }) })
       const data = await response.json()
       if (!response.ok) throw new Error(data.error || 'Login failed.')
       sessionStorage.setItem('portfolio-admin-token', data.token); setToken(data.token); setPassword('')
@@ -112,7 +113,7 @@ export default function Admin() {
     if (!content) return
     setBusy(true); setNotice('')
     try {
-      const response = await fetch('/api/admin/content', { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(content) })
+      const response = await fetch(apiUrl('/api/admin/content'), { method: 'PUT', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(content) })
       const data = await response.json()
       if (!response.ok) throw new Error(data.error || 'Could not save changes.')
       setContent(data); setNotice('Changes saved. Your portfolio is updated.')
@@ -127,7 +128,7 @@ export default function Admin() {
       const encoded = await new Promise<string>((resolve, reject) => {
         const reader = new FileReader(); reader.onload = () => resolve(String(reader.result).split(',')[1] || ''); reader.onerror = () => reject(new Error('Could not read this image.')); reader.readAsDataURL(file)
       })
-      const response = await fetch('/api/admin/upload', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify({ filename: file.name, data: encoded }) })
+      const response = await fetch(apiUrl('/api/admin/upload'), { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify({ filename: file.name, data: encoded }) })
       const result = await response.json()
       if (!response.ok) throw new Error(result.error || 'Image upload failed.')
       setContent((current) => current ? updateAt(current as unknown as Value, path, result.url) as PortfolioContent : current)
